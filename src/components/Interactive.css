@@ -1,0 +1,420 @@
+.interactive-container {
+    background: linear-gradient(135deg, #1b2d61, #0b1a3a);
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Intro Section */
+.interactive-intro {
+    text-align: center;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.interactive-intro h1 {
+    font-size: 3rem;
+    color: #ffd748;
+    margin-bottom: 20px;
+}
+
+.interactive-intro p {
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+}
+
+.challenge-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.challenge-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.challenge-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 215, 72, 0.3);
+}
+
+.challenge-card h2 {
+    font-size: 1.8rem;
+    color: #ffd748;
+    margin-bottom: 15px;
+}
+
+.challenge-card p {
+    font-size: 1rem;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.challenge-button {
+    background-color: #ffd748;
+    color: #1b2d61;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.challenge-button:hover {
+    background-color: #ffffff;
+    transform: scale(1.05);
+}
+
+/* Guess Who Section */
+.guess-who-section,
+.leadership-poll-section,
+.results-section {
+    max-width: 800px;
+    width: 100%;
+}
+
+.section-description {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.question-container {
+    margin-bottom: 40px;
+}
+
+.question {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.question h3 {
+    font-size: 1.5rem;
+    color: #ffd748;
+    margin-bottom: 15px;
+}
+
+.question p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.option-button {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    padding: 12px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.option-button:hover {
+    background-color: rgba(255, 215, 72, 0.2);
+    border-color: #ffd748;
+}
+
+.option-button.selected {
+    background-color: #ffd748;
+    color: #1b2d61;
+    border-color: #ffd748;
+    font-weight: 600;
+}
+
+/* Leadership Poll Section */
+.traits-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.trait-button {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.trait-button:hover:not(:disabled) {
+    background-color: rgba(255, 215, 72, 0.2);
+    border-color: #ffd748;
+}
+
+.trait-button.selected {
+    background-color: #ffd748;
+    color: #1b2d61;
+    border-color: #ffd748;
+    font-weight: 600;
+}
+
+.trait-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.selection-count {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    color: #ffd748;
+}
+
+/* Results Section */
+.results-container {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.result-item {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.result-item h3 {
+    font-size: 1.3rem;
+    color: #ffd748;
+    margin-bottom: 15px;
+}
+
+.user-answer {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.correct-answer {
+    font-weight: 600;
+    color: #ffd748;
+}
+
+.correct-message {
+    color: #4caf50;
+    margin-top: 10px;
+}
+
+    .incorrect-message {
+        color: #f44336;
+        margin-top: 10px;
+    }
+
+    .leadership-lesson,
+    .leadership-insight {
+        background-color: rgba(255, 215, 72, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 30px;
+    }
+
+    .leadership-lesson h3,
+    .leadership-insight h3 {
+        color: #ffd748;
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+
+    .leadership-score {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .leadership-score h2 {
+        font-size: 1.8rem;
+        color: #ffd748;
+        margin-bottom: 15px;
+    }
+
+    .progress-bar {
+        width: 100%;
+        height: 20px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .progress {
+        height: 100%;
+        background-color: #ffd748;
+        border-radius: 10px;
+        transition: width 1s ease-in-out;
+    }
+
+    .traits-analysis {
+        margin-bottom: 30px;
+    }
+
+    .traits-analysis h3 {
+        font-size: 1.4rem;
+        color: #ffd748;
+        margin-bottom: 15px;
+    }
+
+    .selected-traits {
+        list-style: none;
+        padding: 0;
+    }
+
+    .selected-traits li {
+        background-color: rgba(255, 255, 255, 0.05);
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+
+    /* Navigation Buttons */
+    .navigation-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+
+    .nav-button {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #ffffff;
+        padding: 12px 25px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 1rem;
+    }
+
+    .nav-button:hover:not(:disabled) {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .submit-button {
+        background-color: #ffd748;
+        color: #1b2d61;
+        border-color: #ffd748;
+        font-weight: 600;
+    }
+
+    .submit-button:hover:not(:disabled) {
+        background-color: #ffffff;
+        border-color: #ffffff;
+    }
+
+    .nav-button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+    @media (max-width: 768px) {
+        .interactive-intro h1 {
+            font-size: 2.2rem;
+        }
+
+        .challenge-cards {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .challenge-card {
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .traits-container {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .navigation-buttons {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .nav-button {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .interactive-container {
+            padding: 40px 15px;
+        }
+
+        .interactive-intro h1 {
+            font-size: 1.8rem;
+        }
+
+        .interactive-intro p {
+            font-size: 1rem;
+        }
+
+        .challenge-card {
+            padding: 20px;
+        }
+
+        .challenge-card h2 {
+            font-size: 1.5rem;
+        }
+
+        .question h3 {
+            font-size: 1.3rem;
+        }
+
+        .question p {
+            font-size: 1rem;
+        }
+
+        .option-button {
+            padding: 10px 15px;
+            font-size: 0.9rem;
+        }
+
+        .traits-container {
+            grid-template-columns: 1fr;
+        }
+
+        .result-item h3 {
+            font-size: 1.2rem;
+        }
+
+        .leadership-insight h3 {
+            font-size: 1.2rem;
+        }
+
+        .selected-traits li {
+            font-size: 0.95rem;
+            padding: 10px;
+        }
+    }

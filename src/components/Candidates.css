@@ -1,0 +1,281 @@
+.candidates-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #1b2d61;
+    color: #ffffff;
+    animation: fadeIn 1.2s ease-in-out;
+    padding: 80px 20px;
+}
+
+.candidates-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.candidates-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.candidates-subtitle {
+    font-size: 1.5rem;
+    color: #ffd748;
+    margin-top: 10px;
+}
+
+.candidates-grid {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    max-width: 1200px;
+}
+
+.candidate-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    width: 320px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
+    position: relative;
+}
+
+.candidate-card.featured {
+    transform: scale(1.05);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
+    border: 2px solid #ffd748;
+}
+
+.candidate-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.candidate-card.featured:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+.candidate-image-container {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.candidate-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.5s ease;
+}
+
+.candidate-card:hover img {
+    transform: scale(1.05);
+}
+
+.candidate-role {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(27, 45, 97, 0.9), transparent);
+    color: #ffd748;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.candidate-name {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffd748;
+    text-align: center;
+    margin: 20px 0;
+    padding: 0 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.candidate-details {
+    padding: 0 20px 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.candidate-card h3 {
+    font-size: 1.2rem;
+    margin: 10px 0 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.candidate-card ul {
+    list-style-type: disc;
+    padding-left: 25px;
+    font-size: 1rem;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+.candidate-card ul.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.candidate-card ul li {
+    margin-bottom: 8px;
+}
+
+.achievements {
+    margin-top: 20px;
+    background-color: rgba(255, 215, 72, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
+}
+
+.achievements.expanded {
+    max-height: 500px;
+    opacity: 1;
+    padding: 15px;
+}
+
+.achievements h4 {
+    color: #ffd748;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.achievements ul {
+    opacity: 1;
+    transform: translateX(0);
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.achievements ul li {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.team-philosophy {
+    max-width: 800px;
+    margin: 60px auto 0;
+    background-color: rgba(255, 215, 72, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 215, 72, 0.3);
+}
+
+.team-philosophy h2 {
+    font-size: 2rem;
+    color: #ffd748;
+    margin-bottom: 20px;
+}
+
+.team-philosophy p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .candidates-title {
+        font-size: 2.2rem;
+    }
+
+    .candidates-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .candidates-grid {
+        gap: 30px;
+    }
+
+    .candidate-card {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .team-philosophy {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .candidates-container {
+        padding: 60px 15px;
+    }
+
+    .candidates-title {
+        font-size: 1.8rem;
+    }
+
+    .candidates-subtitle {
+        font-size: 1rem;
+    }
+
+    .candidate-image-container {
+        height: 280px;
+    }
+
+    .candidate-role {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .candidate-name {
+        font-size: 0.9rem;
+    }
+
+    .candidate-card h3 {
+        font-size: 1rem;
+    }
+
+    .candidate-card ul {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .team-philosophy h2 {
+        font-size: 1.5rem;
+    }
+
+    .team-philosophy p {
+        font-size: 0.95rem;
+    }
+}
